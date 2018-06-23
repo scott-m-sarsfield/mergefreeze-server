@@ -2,25 +2,18 @@ import { Router } from 'express';
 
 const router = Router();
 
-router.get('/', function(req, res) {
-    const data = getPayLoad(req);
-    const response = {
-        "text": "Now: 34 degrees and raining",
-        "attachments": [{
-            "text": `Dummy GET response. Only you can see this ${data.user_name}`
-        }]
-    };
-    res.send(response);
-});
-
 router.post('/', function(req, res) {
     const data = getPayLoad(req);
     const response = {
         "response_type": "in_channel",
-        "text": "Now: 34 degrees and raining",
-        "attachments": [{
-            "text":`Thanks for asking ${data.user_name}. Hi everyone! :wave:`
-        }]
+        "attachments": [
+            {
+              "text":`MERGE FREEZE IN EFFECT`
+            },
+            {
+              "image_url":"https://i.imgur.com/lCIulgN.jpg"
+            }
+        ]
     };
     res.send(response);
 });
