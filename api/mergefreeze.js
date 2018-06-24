@@ -32,14 +32,14 @@ function getCommand(text){
 function invalidResponse(){
   return {
     "response_type": "ephemeral",
-    "text": `That isn't a command. Only _\\mergefreeze start_ or _\\mergefreeze end_`
+    "text": `That isn't a command. Only _/mergefreeze start_ or _/mergefreeze end_`
   };
 }
 
 function startMergeFreezeResponse(){
   return {
       "response_type": "in_channel",
-      "text": `MERGE FREEZE IN EFFECT`,
+      "text": `*MERGE FREEZE IN EFFECT*`,
       "attachments": [
           {
             "image_url":"https://i.imgur.com/lCIulgN.jpg"
@@ -50,7 +50,7 @@ function startMergeFreezeResponse(){
 function endMergeFreezeResponse(){
   return {
       "response_type": "in_channel",
-      "text": `MERGE FREEZE OFF`,
+      "text": `*MERGE FREEZE OFF*`,
       "attachments": [
           {
             "image_url":"https://i.imgur.com/QsnFY6Z.jpg"
