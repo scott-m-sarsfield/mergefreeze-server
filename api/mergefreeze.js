@@ -39,7 +39,7 @@ function invalidResponse(){
 function startMergeFreezeResponse(){
   return {
       "response_type": "in_channel",
-      "text": `*MERGE FREEZE IN EFFECT*`,
+      "text": `@here *MERGE FREEZE IN EFFECT*`,
       "attachments": [
           {
             "image_url":"https://i.imgur.com/lCIulgN.jpg"
@@ -50,7 +50,7 @@ function startMergeFreezeResponse(){
 function endMergeFreezeResponse(){
   return {
       "response_type": "in_channel",
-      "text": `*MERGE FREEZE OFF*`,
+      "text": `@here *MERGE FREEZE OFF*`,
       "attachments": [
           {
             "image_url":"https://i.imgur.com/QsnFY6Z.jpg"
